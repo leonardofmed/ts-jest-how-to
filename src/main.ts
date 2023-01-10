@@ -16,10 +16,14 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
+    <div class="card">
+      <button id="multiple" type="button"></button>
+    </div>
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
 `
 
-counter.setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+counter.setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
+counter.setupMultiple(document.querySelector<HTMLButtonElement>('#multiple')!);
