@@ -4,3 +4,4 @@ Playground to jest testing with a simple Vite + Typescript project. The default 
 ## How this project was created
 - Init vite: `npm create vite@latest` using vanilla template and Typescript option;
 - Install `jest` and `@types/jest`.
+- Build: `npm run build`.
