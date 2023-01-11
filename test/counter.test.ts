@@ -19,7 +19,7 @@ describe("Counter", () => {
         spy.mockReturnValue(mockCounterElement);
         mockMultipleElement = document.createElement("button");
         spy.mockReturnValue(mockMultipleElement);
-        
+
         counter.setupCounter(mockCounterElement);
         counter.setupMultiple(mockMultipleElement);
     });
@@ -28,12 +28,14 @@ describe("Counter", () => {
         expect(counter.counter).toBe(0);
     });
 
-    it("should increment to the counter", () => {
-        // Set the counter to 1
-        mockCounterElement.click();
+    it("should increment to the counter after click", () => {
+        mockCounterElement.click(); // Set the main counter to 1
         expect(counter.counter).toBe(1);
     });
 
-    it.todo("should increment to the multiplier");
+    it("should have double the counter value in multiplier element", () => {
+        mockCounterElement.click(); // Set the main counter to 1
+        expect(mockMultipleElement.innerHTML).toBe("multiple is 2");
+    });
 
 });
