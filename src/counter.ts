@@ -16,11 +16,11 @@ export class Counter {
     this.multipleCounterElement = element;
   }
 
-  private setMultiple(count: number) {
+  public setMultiple(count: number) {
     this.multipleCounterElement.innerHTML = `multiple is ${count}`;
   }
 
-  private setCounter(count: number) {
+  public setCounter(count: number) {
     this.counter = count;
     this.mainCounterElement.innerHTML = `count is ${this.counter}`;
   }

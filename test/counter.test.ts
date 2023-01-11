@@ -1,24 +1,38 @@
 import { Counter } from '../src/counter';
 
-jest.mock('../src/counter');
-
-// Create a mock counter instance
+//jest.mock('../src/counter'); // Counter is now a mock constructor
 //const CounterMock = Counter as jest.Mock<Counter>;
 
 describe("Counter", () => {
 
     // Before each test, instantiate the counter
     let counter: Counter;
+    let spy;
+    let mockCounterElement: HTMLButtonElement;
+    let mockMultipleElement: HTMLButtonElement;
     beforeEach(() => {
         //counter = new CounterMock() as jest.Mocked<Counter>;
         counter = new Counter();
+        spy = jest.spyOn(document, 'getElementById');
+
+        mockCounterElement = document.createElement("button");
+        spy.mockReturnValue(mockCounterElement);
+        mockMultipleElement = document.createElement("button");
+        spy.mockReturnValue(mockMultipleElement);
+        
+        counter.setupCounter(mockCounterElement);
+        counter.setupMultiple(mockMultipleElement);
     });
 
     it("should be an active counter when user enters the page and start with 0", () => {
         expect(counter.counter).toBe(0);
     });
 
-    it.todo("should increment to the counter");
+    it("should increment to the counter", () => {
+        // Set the counter to 1
+        mockCounterElement.click();
+        expect(counter.counter).toBe(1);
+    });
 
     it.todo("should increment to the multiplier");
 

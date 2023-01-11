@@ -40,6 +40,7 @@ module.exports = {
   },
 }
 ```
+- Installed `jest-environment-jsdom` and added the following option in `jest.config.js` so we can mock HTML elements: `"testEnvironment": 'jsdom'`
 - Build: `npm run build`.
 
 
