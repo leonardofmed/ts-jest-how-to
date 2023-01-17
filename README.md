@@ -11,7 +11,7 @@ To test a piece of code swiftly and have consistent reliable results all the oth
 
 Any external resource or even code outside the system under test should be mocked out. Replacing any external resource like network calls or file system access not only makes the unit test blazing fast but also removes any chance of the test failing due to external factors out of your control.¹
 
-## [¹Multiple Mocks Methods](https://github.com/leonardofmed/ts-jest-how-to#references)
+## [Multiple Mocks Methods¹](https://github.com/leonardofmed/ts-jest-how-to#references)
 There are multiple ways to mock an ES6 class in Jest. To keep things simple and consistent we will use the module factory parameters method and jest SpyOn to mock a specific method of a class. These two methods are not only flexible but also maintainable down the line.
 
 Both methods give the flexibility to change these mocks for each test. We will replace the whole object with the module factory pattern. It is used if we want to mock most or all of the methods in the class. If there are one or two methods to mock for the unit test, the spy method will be better suited.
