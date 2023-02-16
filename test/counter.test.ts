@@ -1,8 +1,5 @@
 import { Counter } from '../src/counter';
 
-//jest.mock('../src/counter'); // Counter is now a mock constructor
-//const CounterMock = Counter as jest.Mock<Counter>;
-
 describe("Counter", () => {
 
     // Before each test, instantiate the counter
@@ -10,8 +7,8 @@ describe("Counter", () => {
     let spy;
     let mockCounterElement: HTMLButtonElement;
     let mockMultipleElement: HTMLButtonElement;
+
     beforeEach(() => {
-        //counter = new CounterMock() as jest.Mocked<Counter>;
         counter = new Counter();
         spy = jest.spyOn(document, 'getElementById');
 

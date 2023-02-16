@@ -52,7 +52,7 @@ describe('ExchangeRateService', () => {
 			expect(ExchangeRateClient).toHaveBeenCalled();
 
 			/**
-			 * the constructor mock for the client is expected to have been called. 
+			 * The constructor mock for the client is expected to have been called. 
 			 * Similarly, the mock function is also expected to have been called and to have been called with the currency pair of USD to AED.
 			 */
 			expect(mockGetLatestExchangeRate).toHaveBeenCalled();
